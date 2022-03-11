@@ -1,35 +1,45 @@
 {
-    "name": "strapi-provider-upload-cloudflare",
-    "version": "4.0.1",
-    "maintainers": [
-        "s.thakur.dev@gmail.com"
-    ],
-    "keywords": [
-        "upload",
-        "cloudflare",
-        "images",
-        "strapi"
-    ],
-    "main": "./lib",
-    "directories": {
-        "lib": "./lib"
-    },
-    "devDependencies": {},
-    "homepage": "https://github.com/sanjay-io/strapi-provider-upload-cloudflare#readme",
-    "bugs": {
-        "url": "https://github.com/sanjay-io/strapi-provider-upload-cloudflare/issues"
-    },
-    "description": "Strapi provider for uploading to Cloudflare Images",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Sanjay Thakur",
-    "license": "MIT",
-    "dependencies": {
-        "axios": "^0.24.0",
-        "form-data": "^4.0.0"
-    },
-    "strapi": {
-        "isProvider": true
-    }
+  "name": "strapi-provider-upload-cloudflare",
+  "version": "4.0.1",
+  "maintainers": [
+    "s.thakur.dev@gmail.com"
+  ],
+  "keywords": [
+    "upload",
+    "cloudflare",
+    "images",
+    "strapi"
+  ],
+  "main": "./lib",
+  "directories": {
+    "lib": "./lib"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.1.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "axios": "^0.24.0",
+    "babel-eslint": "^8.2.6",
+    "eslint": "^4.19.1",
+    "form-data": "^4.0.0",
+    "jest": "^27.5.1",
+    "stream": "0.0.2"
+  },
+  "homepage": "https://github.com/sanjay-io/strapi-provider-upload-cloudflare#readme",
+  "bugs": {
+    "url": "https://github.com/sanjay-io/strapi-provider-upload-cloudflare/issues"
+  },
+  "description": "Strapi provider for uploading to Cloudflare Images",
+  "scripts": {
+    "test:integration": "jest \".*\\.integration\\.spec\\.js\"",
+    "lint": "eslint --fix \"src/**/*.js\"",
+    "lint:format": "prettier --write \"./**/*.{js,json,yml,yaml,css,scss,md,mdx,html}\""
+  },
+  "author": "Sanjay Thakur",
+  "license": "MIT",
+  "dependencies": {},
+  "strapi": {
+    "isProvider": true
+  }
 }
