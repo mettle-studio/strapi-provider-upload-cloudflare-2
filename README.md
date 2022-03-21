@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/strapi-provider-upload-cloudflare.svg)](https://www.npmjs.org/package/strapi-provider-upload-google-cloud-storage)
 [![npm downloads](https://img.shields.io/npm/dm/strapi-provider-upload-cloudflare.svg)](https://www.npmjs.org/package/strapi-provider-upload-google-cloud-storage)
 
-**Non-Official** Cloudflare Upload Provider for Strapi
+**Non-Official** Cloudflare Images and Video Upload Provider for Strapi
 
 This has only been tested with Strapi 4.
 

@@ -1,13 +1,15 @@
 {
-  "name": "strapi-provider-upload-cloudflare",
-  "version": "4.0.1",
+  "name": "strapi-provider-upload-cloudflare-2",
+  "version": "1.0.0",
   "maintainers": [
-    "s.thakur.dev@gmail.com"
+    "matt@mettle-studio.com",
+    "sam@mettle-studio.com"
   ],
   "keywords": [
     "upload",
     "cloudflare",
     "images",
+    "streams",
     "strapi"
   ],
   "main": "./lib",
@@ -26,11 +28,11 @@
     "jest": "^27.5.1",
     "stream": "0.0.2"
   },
-  "homepage": "https://github.com/sanjay-io/strapi-provider-upload-cloudflare#readme",
+  "homepage": "https://github.com/sanjay-io/strapi-provider-upload-cloudflare-2#readme",
   "bugs": {
-    "url": "https://github.com/sanjay-io/strapi-provider-upload-cloudflare/issues"
+    "url": "https://github.com/sanjay-io/strapi-provider-upload-cloudflare-2/issues"
   },
-  "description": "Strapi provider for uploading to Cloudflare Images",
+  "description": "Strapi provider for uploading and deleting to/from Cloudflare streams and images compatible",
   "scripts": {
     "test:integration": "jest \".*\\.integration\\.spec\\.js\"",
     "lint": "eslint --fix \"src/**/*.js\"",
