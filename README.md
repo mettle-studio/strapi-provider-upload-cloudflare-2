@@ -9,7 +9,7 @@ This has only been tested with Strapi 4.
 
 To find your Cloudflare accountId and apiKey, log into Cloudflare and click "Images". On that page you should see "Account ID" under Developer Resources. For apiKey, if you click the "Use API" tab you'll see a link next to "API Token" to generate an apiKey. The only permission that API Token needs is "Account.Cloudflare Images".
 
-If you have multiple image variants the first one will be selected. If you'd like to be able to pick a specific image variant, make an issue or pull-request. :)
+You must specify which variant you choose using the config option variant, this will then find the variant with the set name.
 
 ## Installation
 
