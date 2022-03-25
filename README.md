@@ -66,7 +66,7 @@ module.exports = [
         directives: {
           'connect-src': ["'self'", 'https:'],
           'img-src': ["'self'", 'data:', 'blob:', 'imagedelivery.net'],
-          'media-src': ["'self'", 'data:', 'blob:', 'imagedelivery.net'],
+          'media-src': ["'self'", 'data:', 'blob:', 'imagedelivery.net', 'videodelivery.net', 'watch.cloudflarestream.com'],
           upgradeInsecureRequests: null,
         },
       },
