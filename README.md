@@ -3,13 +3,13 @@
 [![npm version](https://img.shields.io/npm/v/strapi-provider-upload-cloudflare.svg)](https://www.npmjs.org/package/strapi-provider-upload-google-cloud-storage)
 [![npm downloads](https://img.shields.io/npm/dm/strapi-provider-upload-cloudflare.svg)](https://www.npmjs.org/package/strapi-provider-upload-google-cloud-storage)
 
-**Non-Official** Cloudflare Upload Provider for Strapi
+**Non-Official** Cloudflare Images and Video Upload Provider for Strapi
 
 This has only been tested with Strapi 4.
 
 To find your Cloudflare accountId and apiKey, log into Cloudflare and click "Images". On that page you should see "Account ID" under Developer Resources. For apiKey, if you click the "Use API" tab you'll see a link next to "API Token" to generate an apiKey. The only permission that API Token needs is "Account.Cloudflare Images".
 
-If you have multiple image variants the first one will be selected. If you'd like to be able to pick a specific image variant, make an issue or pull-request. :) 
+You must specify which variant you choose using the config option variant, this will then find the variant with the set name. See below for an example in the example config.
 
 ## Installation
 
@@ -40,6 +40,7 @@ module.exports = ({ env }) => ({
       providerOptions: {
         accountId: env('STRAPI_UPLOAD_CLOUDFLARE_ACCOUNT_ID'),
         apiKey: env('STRAPI_UPLOAD_CLOUDFLARE_API_KEY'),
+        variant: 'cms',
       },
     },
   },
@@ -66,12 +67,12 @@ module.exports = [
         directives: {
           'connect-src': ["'self'", 'https:'],
           'img-src': ["'self'", 'data:', 'blob:', 'imagedelivery.net'],
-          'media-src': ["'self'", 'data:', 'blob:', 'imagedelivery.net'],
+          'media-src': ["'self'", 'data:', 'blob:', 'imagedelivery.net', 'videodelivery.net', 'watch.cloudflarestream.com'],
           upgradeInsecureRequests: null,
         },
       },
     },
-  }, 
+  },
   // ...
 ];
 ```
