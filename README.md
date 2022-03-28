@@ -1,13 +1,13 @@
-# strapi-provider-upload-cloudflare
+# strapi-provider-upload-cloudflare-2
 
-[![npm version](https://img.shields.io/npm/v/strapi-provider-upload-cloudflare.svg)](https://www.npmjs.org/package/strapi-provider-upload-google-cloud-storage)
-[![npm downloads](https://img.shields.io/npm/dm/strapi-provider-upload-cloudflare.svg)](https://www.npmjs.org/package/strapi-provider-upload-google-cloud-storage)
+[![npm version](https://img.shields.io/npm/v/strapi-provider-upload-cloudflare-2.svg)](https://www.npmjs.org/package/strapi-provider-upload-cloudflare-2)
+[![npm downloads](https://img.shields.io/npm/dm/strapi-provider-upload-cloudflare-2.svg)](https://www.npmjs.org/package/strapi-provider-upload-cloudflare-2)
 
 **Non-Official** Cloudflare Images and Video Upload Provider for Strapi
 
 This has only been tested with Strapi 4.
 
-To find your Cloudflare accountId and apiKey, log into Cloudflare and click "Images". On that page you should see "Account ID" under Developer Resources. For apiKey, if you click the "Use API" tab you'll see a link next to "API Token" to generate an apiKey. The only permission that API Token needs is "Account.Cloudflare Images".
+To find your Cloudflare accountId and apiKey, log into Cloudflare and click "Images". On that page you should see "Account ID" under Developer Resources. For apiKey, if you click the "Use API" tab you'll see a link next to "API Token" to generate an apiKey. The only permissions that API Token needs are "Account.Cloudflare Images" and "Account.Cloudflare Streams".
 
 You must specify which variant you choose using the config option variant, this will then find the variant with the set name. See below for an example in the example config.
 
@@ -15,10 +15,10 @@ You must specify which variant you choose using the config option variant, this 
 
 ```bash
 # using yarn
-yarn add strapi-provider-upload-cloudflare
+yarn add strapi-provider-upload-cloudflare-2
 
 # using npm
-npm install strapi-provider-upload-cloudflare
+npm install strapi-provider-upload-cloudflare-2
 ```
 
 ## Configurations
@@ -36,7 +36,7 @@ module.exports = ({ env }) => ({
   // ...
   upload: {
     config: {
-      provider: 'strapi-provider-upload-cloudflare',
+      provider: 'strapi-provider-upload-cloudflare-2',
       providerOptions: {
         accountId: env('STRAPI_UPLOAD_CLOUDFLARE_ACCOUNT_ID'),
         apiKey: env('STRAPI_UPLOAD_CLOUDFLARE_API_KEY'),
