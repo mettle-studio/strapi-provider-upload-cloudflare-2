@@ -84,7 +84,9 @@ module.exports = [
   // ...
 ];
 ```
-
+### Optional
+By default Strapi comes with Responsive formats and provides large, medium and small sizes automatically which also will be uploaded to Cloudflare images. This will count through your Cloudflare images plan by the limit of the amount of images. Because the variants in cloudflare images comes included in the plan it is recommended to turn off the responsive formats. To turn this off open your Strapi admin dashboard and go to **settings** at global settings choose **Media Library**. In this screen you can turn off **Responsive friendly upload** and **Size optimization** since this is handled by Cloudflare images as well.
+Please note Strapi still comes with a thumbnail image variant which is also uploaded automatically to Cloudflare images.
 
 ## Resources
 
