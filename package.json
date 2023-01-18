@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-cloudflare-2",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "maintainers": [
     "savvas@mettle-studio.com",
     "sam@mettle-studio.com"
