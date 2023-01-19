@@ -7,10 +7,6 @@
 
 This has only been tested with Strapi 4.
 
-To find your Cloudflare accountId and apiKey, log into Cloudflare and click "Images". On that page you should see "Account ID" under Developer Resources. For apiKey, if you click the "Use API" tab you'll see a link next to "API Token" to generate an apiKey. The only permissions that API Token needs are "Account.Cloudflare Images" and "Account.Cloudflare Streams".
-
-You must specify which variant you choose using the config option variant, this will then find the variant with the set name. See below for an example in the example config.
-
 ## Installation
 
 ```bash
@@ -48,7 +44,19 @@ module.exports = ({ env }) => ({
 });
 ```
 
-To get your accountId and apiKey see the top of this README.
+For the **variant** you can use one you have configured in Cloudflare Images. Or if not, can configure. In this example we used 'cms' as variant. [Creating variants of your image](https://developers.cloudflare.com/images/cloudflare-images/transform/resize-images/) is partly explained in the Cloudflare documentation. For this go to your Cloudflare Dash panel and click Images. Next click Variants. From that screen you can add a new variant. Please note that with the **Fit Scale Down** option your image size will keeps its original size as long as its not above the given width and height parameters.
+
+### Environment configuration
+
+In the Provider Configuration there are the accountId and apiKey. Those environment variables should be set in the .env file .
+To find your Cloudflare accountId and apiKey, log into your Cloudflare dashboard and click "Images". On that page you should see "Account ID" under Developer Resources. For apiKey, if you click the "Use API" tab you'll see a [link next to "API Token" to generate an apiKey](https://dash.cloudflare.com/profile/api-tokens). Click **get started** at Create Custom Token and give your token a name e.g. 'Cloudflare images Strapi'. In the permissions section after **Account** select item choose "Cloudflare Images" with edit permission. Next add another one and after **Account** select item choose "Stream" with edit permission.
+
+`./.env`
+
+```env
+STRAPI_UPLOAD_CLOUDFLARE_ACCOUNT_ID=<place your Cloudflare Account ID here>
+STRAPI_UPLOAD_CLOUDFLARE_API_KEY=<place your Cloudflare apiKey here>
+```
 
 ### Security Middleware Configuration
 
@@ -76,6 +84,9 @@ module.exports = [
   // ...
 ];
 ```
+### Optional
+By default Strapi comes with Responsive formats and provides large, medium and small sizes automatically which also will be uploaded to Cloudflare images. This will count through your Cloudflare images plan by the limit of the amount of images. Because the variants in cloudflare images comes included in the plan it is recommended to turn off the responsive formats. To turn this off open your Strapi admin dashboard and go to **settings** at global settings choose **Media Library**. In this screen you can turn off **Responsive friendly upload** and **Size optimization** since this is handled by Cloudflare images as well.
+Please note Strapi still comes with a thumbnail image variant which is also uploaded automatically to Cloudflare images.
 
 ## Resources
 
@@ -87,3 +98,5 @@ module.exports = [
 - [Strapi documentation](https://docs.strapi.io)
 - [Strapi community on Discord](https://discord.strapi.io)
 - [Strapi news on Twitter](https://twitter.com/strapijs)
+- [Cloudflare Images documentation](https://developers.cloudflare.com/images/cloudflare-images/)
+- [Cloudflare API token documentation](https://developers.cloudflare.com/api/tokens/)
