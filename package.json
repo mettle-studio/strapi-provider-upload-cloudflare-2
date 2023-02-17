@@ -1,9 +1,10 @@
 {
   "name": "@mettle-studio/strapi-provider-upload-cloudflare-2",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "maintainers": [
     "savvas@mettle-studio.com",
-    "sam@mettle-studio.com"
+    "sam@mettle-studio.com",
+    "steve@slantview.com"
   ],
   "keywords": [
     "upload",
@@ -17,16 +18,16 @@
     "lib": "./lib"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-jest": "^26.1.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.5.1",
     "axios": "^0.24.0",
     "babel-eslint": "^8.2.6",
-    "eslint": "^8.32.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-jest": "^26.9.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "form-data": "^4.0.0",
     "jest": "^27.5.1",
-    "stream": "0.0.2"
+    "prettier": "^2.8.4",
+    "stream": "^0.0.2"
   },
   "homepage": "https://github.com/mettle-studio/strapi-provider-upload-cloudflare-2#readme",
   "bugs": {
@@ -41,10 +42,9 @@
   "author": "Sanjay Thakur",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.0.0",
-    "form-data": "^4.0.0",
+    "dotenv": "^16.0.3",
     "tus": "^0.1.7",
-    "tus-js-client": "^2.3.1"
+    "tus-js-client": "^2.3.2"
   },
   "peerDependencies": {
     "axios": "^0.24.0",
