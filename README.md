@@ -32,11 +32,11 @@ module.exports = ({ env }) => ({
   // ...
   upload: {
     config: {
-      provider: 'strapi-provider-upload-cloudflare-2',
+      provider: "strapi-provider-upload-cloudflare-2",
       providerOptions: {
-        accountId: env('STRAPI_UPLOAD_CLOUDFLARE_ACCOUNT_ID'),
-        apiKey: env('STRAPI_UPLOAD_CLOUDFLARE_API_KEY'),
-        variant: 'cms',
+        accountId: env("STRAPI_UPLOAD_CLOUDFLARE_ACCOUNT_ID"),
+        apiKey: env("STRAPI_UPLOAD_CLOUDFLARE_API_KEY"),
+        variant: "cms",
       },
     },
   },
@@ -68,14 +68,14 @@ Due to the default settings in the Strapi Security Middleware you will need to m
 module.exports = [
   // ...
   {
-    name: 'strapi::security',
+    name: "strapi::security",
     config: {
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'imagedelivery.net'],
-          'media-src': ["'self'", 'data:', 'blob:', 'imagedelivery.net'],
+          "connect-src": ["'self'", "https:"],
+          "img-src": ["'self'", "data:", "blob:", "imagedelivery.net"],
+          "media-src": ["'self'", "data:", "blob:", "imagedelivery.net"],
           upgradeInsecureRequests: null,
         },
       },
@@ -84,7 +84,9 @@ module.exports = [
   // ...
 ];
 ```
+
 ### Optional
+
 By default Strapi comes with Responsive formats and provides large, medium and small sizes automatically which also will be uploaded to Cloudflare images. This will count through your Cloudflare images plan by the limit of the amount of images. Because the variants in cloudflare images comes included in the plan it is recommended to turn off the responsive formats. To turn this off open your Strapi admin dashboard and go to **settings** at global settings choose **Media Library**. In this screen you can turn off **Responsive friendly upload** and **Size optimization** since this is handled by Cloudflare images as well.
 Please note Strapi still comes with a thumbnail image variant which is also uploaded automatically to Cloudflare images.
 
